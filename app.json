@@ -1,13 +1,14 @@
 {
   "expo": {
-    "name": "obd-app",
-    "slug": "obd-app",
+    "name": "Авто Сканер",
+    "slug": "auto-scanner",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "kz.rburkit.autoscanner"
     },
     "android": {
       "adaptiveIcon": {
@@ -16,10 +17,26 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "kz.rburkit.autoscanner"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "name": "Авто Сканер",
+      "shortName": "Авто Сканер"
+    },
+    "plugins": [
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": false,
+          "neverForLocation": true,
+          "bluetoothAlwaysPermission": "Приложению нужен Bluetooth, чтобы подключиться к OBD2-адаптеру в машине."
+        }
+      ]
+    ],
+    "experiments": {
+      "baseUrl": "/auto-scanner"
     }
   }
 }
